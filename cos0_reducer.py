@@ -9,7 +9,11 @@ def read_input(fp):
 
 def get_urlpair(urls):
     '''
+<<<<<<< HEAD
     Params: <iterator>urls: not sorted
+=======
+    Params: <iterator>urls: no need to be sorted, but need to be numbers
+>>>>>>> f1275ea50e1ad7be727ca4690d0f682141b9e2a3
     Return: [(url1, url2)]
     '''
     url1 = sorted(urls)
@@ -30,7 +34,11 @@ def main():
     # Get users<{user:{url:weight}}>
     for line in data:
         user, url, weight = line
+<<<<<<< HEAD
         weight = int(weight)
+=======
+        url, weight = int(url), int(weight)
+>>>>>>> f1275ea50e1ad7be727ca4690d0f682141b9e2a3
         if user not in users:
             users.setdefault(user, {})[url] = weight
         users[user][url] = weight
@@ -44,7 +52,11 @@ def main():
 if __name__ == '__main__':
     '''
     Dot
+<<<<<<< HEAD
     Input:  <user: url,weight>
+=======
+    Input:  <user: url, weight>
+>>>>>>> f1275ea50e1ad7be727ca4690d0f682141b9e2a3
     Output: <(url1, url2): 0(numerator), product>
     '''
     main()
